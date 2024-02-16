@@ -1,0 +1,115 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Arial ,sans-serif;
+}
+
+.card {
+  width: 16rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #eda4e9;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.3s ease; 
+}
+
+.card:hover {
+  transform: translateY(-20px); 
+}
+.poster img{
+  width: 15rem;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.App {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(204, 255, 238);
+}
+.search-box input {
+  background-color: white;
+}
+
+.search-nav {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10rem;
+  justify-content: center;
+  color: white;
+
+}
+
+.title {
+  margin-top: 10px;
+  text-align: center;
+  font-size: px;
+  animation: moveLeftAndRight 3s infinite alternate; 
+}
+
+@keyframes moveLeftAndRight {
+  0% {
+    transform: translateX(-10px); 
+  }
+  100% {
+    transform: translateX(15px); 
+  }
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 10px 0;
+}
+
+.rates button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.final-rating {
+  margin-top: 10px;
+  font-size: 16px;
+}
+form input[type="text"] {
+  width: 40%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-left: 30%;
+}
+form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.search-nav {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10rem;
+  justify-content: center;
+  color: white;
+}
