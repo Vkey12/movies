@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Reviews({ onAddReview }) {
+function REviews({ onAddReview }) {
   const [review, setReview] = useState('');
   const [reviews, setReviews] = useState([]);
 
@@ -29,4 +29,4 @@ function Reviews({ onAddReview }) {
   );
 }
 
-export default Reviews;
+export default REviews;
