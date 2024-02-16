@@ -4,21 +4,27 @@
   font-family: Arial ,sans-serif;
 }
 
+
 .card {
-  width: 16rem;
-  margin-right: 1.5rem;
-  margin-bottom: 1.5rem;
-  background-color: #eda4e9;
-  border-radius: 8px;
-  padding: 10px;
-  transition: transform 0.3s ease; 
+width: 16rem;
+margin-right: 1.5rem;
+margin-bottom: 1.5rem;
+background-color: lightpink;
+border-radius: 8px;
+padding: 10px;
+transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-20px); 
-}
-.poster img{
+transform: translateY(-10px);
+.poster img {
   width: 15rem;
+  transition: transform 0.3s ease;
+}
+
+.poster img:hover {
+  transform: scale(1.0); 
+}
 }
 
 .movies {
