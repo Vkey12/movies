@@ -4,7 +4,7 @@ import MovieCard from './MovieCard';
 import SearchForm from './SearchForm';
 import Footer from './Footer';
 import Rating from './Rating';
-import Reviews from './REview';
+import REviews from './REview';
 import { Route, Routes } from "react-router-dom";
 import { BrowserRouter } from 'react-router-dom';
 import NavBar from './NavBar';
