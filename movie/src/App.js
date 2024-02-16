@@ -17,6 +17,28 @@ function App() {
   const [appRating, setAppRating] = useState(0);
   const [reviews, setReviews] = useState([]);
 
+  useEffect(() => {
+    fetch(url)
+      .then(res => res.json())
+      .then(data => setSearch(data))
+  }, [])
+
+  console.log(Search)
+
+  const handleSearch = (term) => {
+    fetch(`${url}?s=${term}`)
+      .then((res) => res.json())
+      .then((data) => setSearch(data.Search));
+  };
+
+  const handleRateApp = (rating) => {
+
+    setAppRating(rating);
+  };
+
+
+  
+
   return (
     <div className="App">
       
