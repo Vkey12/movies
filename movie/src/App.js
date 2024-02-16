@@ -63,9 +63,12 @@ function App() {
         </BrowserRouter >
 
         <div className='movies'>
-          {Search && Search.map((movie) => {
+          {Search && Search.length > 0 ? (Search.map((movie) => {
             return <MovieCard {...movie} onRate={handleRateApp} />
-          })}
+          })
+          ) : (
+            <p>No movies found</p>
+          )}
 
         </div>
         <div>
