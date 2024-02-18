@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import './index.css';
 import MovieCard from './MovieCard';
 import SearchForm from './SearchForm';
 import Footer from './Footer';
