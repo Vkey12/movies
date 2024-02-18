@@ -4,7 +4,7 @@ import MovieCard from './MovieCard';
 import SearchForm from './SearchForm';
 import Footer from './Footer';
 import Rating from './Rating';
-import REviews from './REview';
+import Reviews from './REview';
 import { Route, Routes } from "react-router-dom";
 import { BrowserRouter } from 'react-router-dom';
 import NavBar from './NavBar';
@@ -13,17 +13,17 @@ import SignIn from './SignIn';
 
 function App() {
 
-  const url = "https://movie-kohl-gamma.vercel.app/Search"
+  const url = "https://movie-kohl-gamma.vercel.app/Search"  
   const [Search, setSearch] = useState([])
-  const [appRating, setAppRating] = useState(0);
+  const [ appRating, setAppRating] = useState(0);
   const [reviews, setReviews] = useState([]);
+  
 
-
-  useEffect(() => {
+  useEffect(() =>{
     fetch(url)
       .then(res => res.json())
       .then(data => setSearch(data))
-  }, [])
+  },[])
 
   console.log(Search)
 
@@ -37,13 +37,13 @@ function App() {
 
     setAppRating(rating);
   };
-
+  
   const handleAddReview = (review) => {
     setReviews([...reviews, { text: review }]);
   };
 
 
-
+ 
   return (
     <div className="App">
       <div className='"search-nav'>
@@ -52,41 +52,36 @@ function App() {
         </div>
 
         <div>
-          <SearchForm onSearch={handleSearch} />
-
+        <SearchForm onSearch={handleSearch} />
+     
         </div>
         <BrowserRouter>
-          <NavBar />
-          <Routes>
-            <Route exact path="/signin" element={<SignIn />} />
-          </Routes>
+        <NavBar />
+        <Routes>
+            <Route exact path="/signin" element={<SignIn />}/>
+        </Routes>
         </BrowserRouter >
-
+        
         <div className='movies'>
-          {Search && Search.length > 0 ? (Search.map((movie) => {
-            return <MovieCard {...movie} onRate={handleRateApp} />
-          })
-          ) : (
-            <p>No movies found</p>
-          )}
-
+          {Search && Search.map((movie) =>{
+            return <MovieCard {...movie} onRate={handleRateApp}/>
+          })}
+        
         </div>
         <div>
           <Rating onRate={handleRateApp} />
         </div>
         <div>
-          <Footer />
-
+          <Footer/>
+        
         </div>
         <div>
-          <Reviews onAddReview={handleAddReview} />
+        <Reviews onAddReview={handleAddReview} />
         </div>
-
+       
       </div>
     </div>
   );
 }
 
 export default App;
-
-
